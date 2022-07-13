@@ -7,13 +7,11 @@
 			include $auxSite;
 		}
 	} else {
-		
 		echo "Error : 404";
 	}
 ?>
 
 <?php
-
 	$discipline="historia";
 	
 	$headExam = "page/{$discipline}.html";
@@ -27,11 +25,8 @@
 	}
 
 	//content 
-
 	for ($quest = 1; $quest < 1 ; $quest++) {
-
 		$content = "page/exam/{$discipline}/{$quest}.html";
-
 		if ( isset( $content ) ) {
 			if ($content) {
 				$auxSite = $content;
@@ -40,7 +35,6 @@
 		} else {
 			echo "Error : 404";
 		}
-		
 	}
 ?>
 

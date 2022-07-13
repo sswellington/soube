@@ -13,7 +13,6 @@
 ?>
 
 <?php
-
 	$discipline="fisica";
 	
 	$headExam = "page/{$discipline}.html";
@@ -27,11 +26,8 @@
 	}
 
 	//content 
-
 	for ($quest = 1; $quest < 20 ; $quest++) {
-
 		$content = "page/exam/{$discipline}/{$quest}.html";
-
 		if ( isset( $content ) ) {
 			if ($content) {
 				$auxSite = $content;
@@ -40,12 +36,11 @@
 		} else {
 			echo "Error : 404";
 		}
-		
 	}
 ?>
 
 <?php
-//headExam 
+	/** headExam  **/
 	//testa se a varivel existe
 	$footerExam = "page/footer.html";
 	if ( isset( $footerExam ) ) {

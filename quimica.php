@@ -13,7 +13,6 @@
 ?>
 
 <?php
-
 	$discipline="quimica";
 	
 	$headExam = "page/{$discipline}.html";
@@ -27,7 +26,6 @@
 	}
 
 	//content 
-
 	for ($quest = 1; $quest < 3 ; $quest++) {
 
 		$content = "page/exam/{$discipline}/{$quest}.html";
@@ -41,7 +39,6 @@
 			echo "Error : 404";
 		}
 	}
-
 ?>
 
 <?php

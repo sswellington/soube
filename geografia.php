@@ -7,13 +7,11 @@
 			include $auxSite;
 		}
 	} else {
-		
 		echo "Error : 404";
 	}
 ?>
 
 <?php
-
 	$discipline="geografia";
 	
 	$headExam = "page/{$discipline}.html";
@@ -27,7 +25,6 @@
 	}
 
 	//content 
-
 	for ($quest = 1; $quest < 1 ; $quest++) {
 
 		$content = "page/exam/{$discipline}/{$quest}.html";
@@ -45,7 +42,7 @@
 ?>
 
 <?php
-//headExam 
+	/** headExam  **/
 	//testa se a varivel existe
 	$footerExam = "page/footer.html";
 	if ( isset( $footerExam ) ) {

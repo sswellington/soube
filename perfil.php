@@ -7,13 +7,12 @@
 			include $auxSite;
 		}
 	} else {
-		
 		echo "Error : 404";
 	}
 ?>
 
 <?php
-//conteúdo 
+	//conteúdo 
 	//testa se a varivel existe
 	$home = "page/perfil.html";
 	if ( isset( $home ) ) {
