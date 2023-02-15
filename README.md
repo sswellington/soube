@@ -1,5 +1,14 @@
 # Simulador Online Brasileiro Educacional
+[![Maintainability](https://api.codeclimate.com/v1/badges/6577b066ecbac352ae82/maintainability)](https://codeclimate.com/github/sswellington/soube/maintainability)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
 
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)     
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=bugs)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
 ### INTRODUÇÃO
 
 Todo estudante no decorrer do colegial, passará por alguma avaliação de conhecimento. 
