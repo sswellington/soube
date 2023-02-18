@@ -1,6 +1,8 @@
-namespace webapi;
+﻿using System;
 
-public class WeatherForecast
+namespace Soube.Domain.Models;
+
+public class WeatherForecastModel
 {
     public DateOnly Date { get; set; }
 

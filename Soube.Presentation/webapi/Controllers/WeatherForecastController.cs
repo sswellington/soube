@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Soube.Domain.Interface.IPresenter;
+using Soube.Domain.Models;
 
 namespace webapi.Controllers;
 
@@ -6,27 +8,16 @@ namespace webapi.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+    private readonly IWeatherForecastPresenter _weatherForecastPresenter;
 
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(IWeatherForecastPresenter weatherForecastPresenter)
     {
-        _logger = logger;
+        _weatherForecastPresenter = weatherForecastPresenter;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public IEnumerable<WeatherForecastModel> Get()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        return _weatherForecastPresenter.Get();
     }
 }
