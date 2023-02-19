@@ -1,3 +1,23 @@
+# Estrutura de pasta:
+
+`public:` esta pasta contém os arquivos estáticos que serão acessíveis pelo navegador, como o index.html e o favicon.ico.
+
+`src:` esta pasta contém todos os arquivos de código-fonte da aplicação.
+
+`components:` esta pasta contém os componentes da aplicação, que são pequenas partes reutilizáveis do código que compõem a interface do usuário.
+
+`pages:` esta pasta contém as páginas da aplicação, que são componentes que representam uma página específica da interface do usuário.
+
+`App.js:` este é o componente principal da aplicação que controla o layout geral e a navegação entre as páginas.
+
+`index.js:` este arquivo é responsável por renderizar a aplicação no navegador.
+
+`index.css:` este arquivo contém estilos globais para a aplicação.
+
+`package.json:` este arquivo contém informações sobre o projeto e suas dependências, bem como scripts para executar tarefas como iniciar o servidor de desenvolvimento.
+
+`package-lock.json:` este arquivo é gerado automaticamente pelo npm e garante que todas as dependências instaladas em diferentes ambientes de desenvolvimento sejam consistentes.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,9 +1,9 @@
-﻿using System;
-
-namespace Soube.Domain.Models;
+﻿namespace Soube.Domain.Models;
 
 public class WeatherForecastModel
 {
+    public int Id { get; set; }
+
     public DateOnly Date { get; set; }
 
     public int TemperatureC { get; set; }
