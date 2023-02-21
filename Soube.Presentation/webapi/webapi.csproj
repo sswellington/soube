@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Soube.Application\Soube.Application.csproj" />
     <ProjectReference Include="..\..\Soube.Domain\Soube.Domain.csproj" />
+    <ProjectReference Include="..\..\Soube.Infrastructure\Soube.Infrastructure.Core\Soube.Infrastructure.Core.csproj" />
   </ItemGroup>
 
 </Project>

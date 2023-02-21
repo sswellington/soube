@@ -1,23 +1,20 @@
-﻿using Soube.Domain.Interface.IPresenter;
+﻿using Soube.Domain.Interface.IBusiness;
+using Soube.Domain.Interface.IPresenter;
 using Soube.Domain.Models;
 
 namespace webapi.Presenter;
 
 public class WeatherForecastPresenter : IWeatherForecastPresenter
 {
-    private static readonly string[] Summaries = new[]
+    private readonly IWeatherForecastBll _weatherForecastBll;
+
+    public WeatherForecastPresenter(IWeatherForecastBll weatherForecastBll)
     {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+        _weatherForecastBll = weatherForecastBll;
+    }
 
     public IEnumerable<WeatherForecastModel> Get()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecastModel
-        {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        return _weatherForecastBll.Get();
     }
 }

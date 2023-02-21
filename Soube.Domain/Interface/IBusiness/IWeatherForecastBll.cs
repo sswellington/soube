@@ -1,8 +1,8 @@
 ﻿using Soube.Domain.Models;
 
-namespace Soube.Domain.Interface.IRepositories;
+namespace Soube.Domain.Interface.IBusiness;
 
-public interface IWeatherForecastRepository
+public interface IWeatherForecastBll
 {
     /// <summary>
     /// Retorna uma lista de previsões de tempo em um intervalo de cinco dias.
