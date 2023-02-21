@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soube.Application", "Soube.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soube.Domain", "Soube.Domain\Soube.Domain.csproj", "{1338A947-792B-4E56-9AAC-E6C0E9F1A82E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soube.Infrastructure", "Soube.Infrastructure\Soube.Infrastructure.csproj", "{C25AEE63-C1FF-4450-A142-0EC5D978F021}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soube.Test.Unit", "Soube.Test\Soube.Test.Unit\Soube.Test.Unit.csproj", "{2F9ADC4B-7C22-488E-BCF6-F9CA174FE324}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soube.Test.Integration", "Soube.Test\Soube.Test.Integration\Soube.Test.Integration.csproj", "{1AB4BF1D-7BDD-420E-BDBE-E449958FB1A3}"
@@ -33,10 +31,6 @@ Global
 		{1338A947-792B-4E56-9AAC-E6C0E9F1A82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1338A947-792B-4E56-9AAC-E6C0E9F1A82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1338A947-792B-4E56-9AAC-E6C0E9F1A82E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C25AEE63-C1FF-4450-A142-0EC5D978F021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C25AEE63-C1FF-4450-A142-0EC5D978F021}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C25AEE63-C1FF-4450-A142-0EC5D978F021}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C25AEE63-C1FF-4450-A142-0EC5D978F021}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2F9ADC4B-7C22-488E-BCF6-F9CA174FE324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2F9ADC4B-7C22-488E-BCF6-F9CA174FE324}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F9ADC4B-7C22-488E-BCF6-F9CA174FE324}.Release|Any CPU.ActiveCfg = Release|Any CPU
