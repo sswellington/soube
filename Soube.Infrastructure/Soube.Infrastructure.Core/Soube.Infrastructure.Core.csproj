@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Soube.Domain\Soube.Domain.csproj" />
+    <ProjectReference Include="..\Soube.Infrastructure.ADO\Soube.Infrastructure.ADO.csproj" />
   </ItemGroup>
 
 </Project>

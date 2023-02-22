@@ -1,23 +1,25 @@
 ﻿using Soube.Domain.Interface.IRepositories;
 using Soube.Domain.Models;
+using Soube.Infrastructure.ADO;
 
 namespace Soube.Infrastructure.Core.Repositories;
 
 public class WeatherForecastRepository : IWeatherForecastRepository
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+    private readonly SoubeContext _context;
+
+    public WeatherForecastRepository(SoubeContext context) => _context = context;
 
     public IEnumerable<WeatherForecastModel> Get()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecastModel
-        {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        return _context.WeatherForecast
+            .Select(item => new WeatherForecastModel
+            {
+                Id = item.Id,
+                Date = DateOnly.FromDateTime(item.Date),
+                TemperatureC = item.Temperature,
+                Summary = item.Summary
+            })
+            .ToArray();
     }
 }

@@ -1,7 +1,9 @@
+using Microsoft.EntityFrameworkCore;
 using Soube.Application.Business;
 using Soube.Domain.Interface.IBusiness;
 using Soube.Domain.Interface.IPresenter;
 using Soube.Domain.Interface.IRepositories;
+using Soube.Infrastructure.ADO;
 using Soube.Infrastructure.Core.Repositories;
 using webapi.Presenter;
 
@@ -9,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddJsonFile(path: "appsettings.json", optional: false, reloadOnChange: true);
 
-//builder.Services.AddDbContext<SoubeContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<SoubeContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 #region Dependency Injection
 builder.Services.AddScoped<IWeatherForecastPresenter, WeatherForecastPresenter>();
