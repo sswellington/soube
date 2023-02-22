@@ -186,12 +186,14 @@ header {
     padding: 2rem 1.5rem;
     /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
 
-    margin: -2rem calc(0px - (50vw - 50%)) 2rem;
+    margin: -2rem calc(50% - 50vw) 2rem;
     /* Shorthand for:
+
 	margin-top: -2rem;
 	margin-bottom: 2rem;
-	margin-left: calc(0px - (50vw - 50%));
-	margin-right: calc(0px - (50vw - 50%)); */
+
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw); */
 
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
@@ -213,7 +215,9 @@ header {
         margin-bottom: 0;
     }
 
-a button,
+/* Shared styles for buttons */
+.button,
+a.button,
 button,
 input[type="submit"],
 input[type="reset"],
@@ -225,27 +229,27 @@ input[type="button"] {
     text-decoration: none;
     white-space: nowrap;
     background: var(--nc-lk-1);
-    color: var(--nc-lk-tx);
     border: 0;
     border-radius: 4px;
     box-sizing: border-box;
     cursor: pointer;
-    color: var(--nc-lk-tx);
 }
 
-    a button[disabled],
+    /* Disabled state styles for buttons */
+    a.button[disabled],
     button[disabled],
     input[type="submit"][disabled],
     input[type="reset"][disabled],
     input[type="button"][disabled] {
-        cursor: default;
-        opacity: .5;
-        /* Set the [X] cursor while hovering a disabled link */
         cursor: not-allowed;
+        opacity: 0.5;
     }
 
+    /* Focus and hover styles for buttons */
     .button:focus,
     .button:enabled:hover,
+    a.button:focus,
+    a.button:enabled:hover,
     button:focus,
     button:enabled:hover,
     input[type="submit"]:focus,
@@ -256,6 +260,10 @@ input[type="button"] {
     input[type="button"]:enabled:hover {
         background: var(--nc-lk-2);
     }
+
+a img {
+    margin-bottom: 0px;
+}
 
 code,
 pre,
@@ -274,7 +282,8 @@ pre {
     border: 1px solid var(--nc-bg-3);
     border-radius: 4px;
     padding: 3px 6px;
-    font-size: 0.9rem;
+    /* ↓ font-size is relative to containing element, so it scales for titles*/
+    font-size: 0.9em;
 }
 
 kbd {
