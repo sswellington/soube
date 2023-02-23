@@ -6,7 +6,7 @@
    "FilterSchemas": false,
    "IncludeConnectionString": false,
    "ModelNamespace": null,
-   "OutputContextPath": "",
+   "OutputContextPath": null,
    "OutputPath": "Data",
    "PreserveCasingWithRegex": true,
    "ProjectRootNamespace": "Soube.Infrastructure.ADO",
@@ -14,6 +14,50 @@
    "SelectedHandlebarsLanguage": 0,
    "SelectedToBeGenerated": 2,
    "Tables": [
+      {
+         "Name": "[dbo].[Aluno]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Autenticar]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Endereco]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Materia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Pessoa]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PessoaFisica]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PessoaJuridica]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Questao]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Simulado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SimuladoQuestao]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Situacao]",
+         "ObjectType": 0
+      },
       {
          "Name": "[dbo].[WeatherForecast]",
          "ObjectType": 0
