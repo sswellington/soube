@@ -13,8 +13,8 @@ public class WeatherForecastPresenter : IWeatherForecastPresenter
         _weatherForecastBll = weatherForecastBll;
     }
 
-    public IEnumerable<WeatherForecastModel> Get()
+    public async Task<IEnumerable<WeatherForecastModel>> GetAllAsync()
     {
-        return _weatherForecastBll.Get();
+        return await _weatherForecastBll.GetAllAsync();
     }
 }

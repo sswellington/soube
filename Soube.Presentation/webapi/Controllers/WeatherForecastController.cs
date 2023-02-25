@@ -16,8 +16,8 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecastModel> Get()
+    public async Task<IEnumerable<WeatherForecastModel>> GetAllAsync()
     {
-        return _weatherForecastPresenter.Get();
+        return await _weatherForecastPresenter.GetAllAsync();
     }
 }

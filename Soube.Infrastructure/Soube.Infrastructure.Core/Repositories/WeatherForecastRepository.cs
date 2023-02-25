@@ -1,4 +1,5 @@
-﻿using Soube.Domain.Interface.IRepositories;
+﻿using Microsoft.EntityFrameworkCore;
+using Soube.Domain.Interface.IRepositories;
 using Soube.Domain.Models;
 using Soube.Infrastructure.ADO;
 
@@ -10,9 +11,9 @@ public class WeatherForecastRepository : IWeatherForecastRepository
 
     public WeatherForecastRepository(SoubeContext context) => _context = context;
 
-    public IEnumerable<WeatherForecastModel> Get()
+    public async Task<IEnumerable<WeatherForecastModel>> GetAllAsync()
     {
-        return _context.WeatherForecast
+        return await _context.WeatherForecast
             .Select(item => new WeatherForecastModel
             {
                 Id = item.Id,
@@ -20,6 +21,6 @@ public class WeatherForecastRepository : IWeatherForecastRepository
                 TemperatureC = item.Temperature,
                 Summary = item.Summary
             })
-            .ToArray();
+            .ToArrayAsync();
     }
 }

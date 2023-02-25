@@ -13,8 +13,8 @@ public class WeatherForecastBll : IWeatherForecastBll
         _weatherForecastRepository = weatherForecastRepository;
     }
 
-    public IEnumerable<WeatherForecastModel> Get()
+    public async Task<IEnumerable<WeatherForecastModel>> GetAllAsync()
     {
-        return _weatherForecastRepository.Get();
+        return await _weatherForecastRepository.GetAllAsync();
     }
 }
