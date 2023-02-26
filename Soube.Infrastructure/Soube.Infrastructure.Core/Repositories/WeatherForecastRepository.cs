@@ -5,13 +5,13 @@ using Soube.Infrastructure.ADO;
 
 namespace Soube.Infrastructure.Core.Repositories;
 
-public class WeatherForecastRepository : IWeatherForecastRepository
+public class WeatherForecastRepository : BaseRepository<WeatherForecastModel>, IWeatherForecastRepository
 {
-    private readonly SoubeContext _context;
+    public WeatherForecastRepository(SoubeContext context) : base(context)
+    {
+    }
 
-    public WeatherForecastRepository(SoubeContext context) => _context = context;
-
-    public async Task<IEnumerable<WeatherForecastModel>> GetAllAsync()
+    public override async Task<IEnumerable<WeatherForecastModel>> GetAllAsync()
     {
         return await _context.WeatherForecast
             .Select(item => new WeatherForecastModel
