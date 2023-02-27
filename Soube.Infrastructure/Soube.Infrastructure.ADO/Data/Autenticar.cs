@@ -8,17 +8,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Soube.Infrastructure.ADO.Data;
 
-public partial class WeatherForecast
+public partial class Autenticar
 {
     [Key]
     public int Id { get; set; }
 
-    [Column(TypeName = "date")]
-    public DateTime Date { get; set; }
-
-    public int Temperature { get; set; }
-
-    [StringLength(50)]
+    [Required]
+    [StringLength(20)]
     [Unicode(false)]
-    public string Summary { get; set; }
+    public string Login { get; set; }
+
+    [Required]
+    [StringLength(16)]
+    [Unicode(false)]
+    public string Senha { get; set; }
+
+    [InverseProperty("Autenticar")]
+    public virtual ICollection<Pessoa> Pessoa { get; } = new List<Pessoa>();
 }

@@ -61,5 +61,19 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\WeatherForecast.sql" />
+    <Build Include="dbo\Tables\PessoaFisica.sql" />
+    <Build Include="dbo\Tables\Pessoa.sql" />
+    <Build Include="dbo\Tables\Endereco.sql" />
+    <Build Include="dbo\Tables\PessoaJuridica.sql" />
+    <Build Include="dbo\Tables\Simulado.sql" />
+    <Build Include="dbo\Tables\Questao.sql" />
+    <Build Include="dbo\Tables\SimuladoQuestao.sql" />
+    <Build Include="dbo\Tables\Materia.sql" />
+    <Build Include="dbo\Tables\Aluno.sql" />
+    <Build Include="dbo\Tables\Situacao.sql" />
+    <Build Include="dbo\Tables\Autenticar.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Soube.Infrastructure.Database.refactorlog" />
   </ItemGroup>
 </Project>
