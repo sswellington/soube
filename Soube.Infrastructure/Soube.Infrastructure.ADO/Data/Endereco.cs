@@ -47,7 +47,8 @@ public partial class Endereco
     [Unicode(false)]
     public string Complemento { get; set; }
 
-    public bool? ZonaUrbana { get; set; }
+    [Required]
+    public bool ZonaUrbana { get; set; }
 
     [InverseProperty("Endereco")]
     public virtual ICollection<Pessoa> Pessoa { get; } = new List<Pessoa>();

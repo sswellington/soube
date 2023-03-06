@@ -9,5 +9,5 @@
     [Bairro] VARCHAR(30) NULL, 
     [Numero] VARCHAR(10) NULL, 
     [Complemento] VARCHAR(50) NULL, 
-    [ZonaUrbana] BIT NULL DEFAULT 1,
+    [ZonaUrbana] BIT NOT NULL DEFAULT 1,
 )
