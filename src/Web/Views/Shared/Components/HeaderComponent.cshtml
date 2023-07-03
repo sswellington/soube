@@ -1,0 +1,56 @@
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+
+@functions {
+    public string GetAntiXsrfRequestToken()
+    {
+        //https://learn.microsoft.com/pt-br/aspnet/core/security/anti-request-forgery
+        return Xsrf.GetAndStoreTokens(Context).RequestToken;
+    }
+}
+
+<environment include="Production"> Alterar a versão do tailwind para prod</environment>
+
+<environment include="Staging">
+    <section class="bg-purple-600 font-bold text-x px-3 py-3 text-white">
+        <p class="text-center">
+            Staging
+        </p>
+    </section>
+</environment>
+
+<environment include="Development">
+    <section class="bg-indigo-600 font-bold text-x px-3 py-3 text-white">
+        <p class="text-center">
+            Development
+        </p>
+    </section>
+</environment>
+
+<header class="flex h-16 justify-between">
+    <a href="/home" aria-label="SOUBE" role="link" class="ml-6 font-bold text-xl">
+        SOUBE
+    </a>
+
+    <nav>
+        <ul class="flex items-center gap-4">
+            <li class="flex">
+                <span id="homeIcon" class="material-symbols-rounded fill">home</span>
+                <a href="/home" aria-label="Home" role="link">Home</a>
+            </li>
+            <li class="flex">
+                <span id="disciplineIcon" class="material-symbols-rounded"> import_contacts</span>
+                <a href="/discipline" aria-label="SOUBE" role="link">Discipline</a>
+            </li>
+            <li class="flex">
+                <span id="profileIcon" class="material-symbols-rounded"> account_circle </span>
+                <a href="/profile" aria-label="SOUBE" role="link">Profile</a>
+            </li>
+            <li class="flex mr-6">
+                <span id="more" class="material-symbols-rounded">menu</span>
+                <a href="#more" aria-label="SOUBE" role="link">More</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<input readonly type="hidden" id="RequestVerificationToken" name="RequestVerificationToken" value="@GetAntiXsrfRequestToken()">

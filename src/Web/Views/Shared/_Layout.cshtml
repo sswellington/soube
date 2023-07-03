@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:description" content="Simulador Online Brasileiro Educacional">
+    <meta property="og:title" content="SOUBE">
+    <meta property="og:type" content="website">
+
+    <title>@ViewData["Title"] - SOUBE</title>
+
+    <link rel="stylesheet" href="~/css/reset.css" asp-append-version="true" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="~/css/material.css" asp-append-version="true" />
+</head>
+<body class="antialiased body-font">
+    <partial name="Components/HeaderComponent.cshtml" />
+
+    <main role="main" class="mx-auto mt-8 px-16">
+            @RenderBody()
+    </main>
+
+    <partial name="Components/FooterComponent.cshtml" />
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
