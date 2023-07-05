@@ -1,27 +1,36 @@
-@using Application.ViewModel;
+@using Application.ViewModel.Shared;
 
 @model ErrorViewModel
 @{
     ViewData["Title"] = "Error";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<div role="alert" class="p-4 mb-4 text-sm rounded">
+    <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+        Development Mode
+    </div>
+    <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+        <p>
+            Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+        </p>
+    </div>
+</div>
 
-@if (Model.ShowRequestId)
-{
-    <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
-    </p>
-}
+<section class="grid px-4 bg-white place-content-center">
+    <div class="text-center">
+        <h1 class="font-black text-gray-200 text-9xl">500</h1>
 
-<h3>Development Mode</h3>
-<p>
-    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
-</p>
-<p>
-    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
-    It can result in displaying sensitive information from exceptions to end users.
-    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
-    and restarting the app.
-</p>
+        <p class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Uh-oh!</p>
+
+        <p class="mt-4 text-gray-500">
+            @if (Model.ShowRequestId)
+            {
+                <strong>Request ID:</strong> <code>@Model.RequestId</code>
+            }
+        </p>
+
+        <a href="/home" class="inline-block px-5 py-3 mt-6 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 focus:outline-none focus:ring">
+            Go Back Home
+        </a>
+    </div>
+</section>
