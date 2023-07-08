@@ -1,0 +1,38 @@
+@model Application.ViewModel.Question.MultipleViewModel;
+
+@{
+	ViewData["Title"] = "Química";
+}
+
+<partial name="../Shared/Components/Title.cshtml" />
+
+<br />
+<article text-2xl>
+	<p>
+        1) (@Model.Organizer - @Model.Year) @Model.Statement
+	</p>
+    <fieldset class="space-y-2">
+	    <div>
+            <input type="radio" name="quimica1" value="AA"> A) @Model.A
+	    </div>
+
+	    <div class="radio">
+            <input type="radio" name="quimica1" value="AB"> B) @Model.B
+	    </div>
+
+	    <div class="radio">
+            <input type="radio" name="quimica1" value="AC"> B) @Model.C
+	    </div>
+
+	    <div class="radio">
+            <input type="radio" name="quimica1" value="AD"> B) @Model.D
+	    </div>
+
+	    <div class="radio">
+            <input type="radio" name="quimica1" value="AE"> E) @Model.E
+	    </div>
+    </fieldset>
+</article>
+
+<script src="~/js/handleIcon.js"></script>
+<script>handleIcon('disciplineIcon');</script>

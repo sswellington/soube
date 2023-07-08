@@ -1,4 +1,4 @@
-using Application.ViewModel;
+using Application.ViewModel.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 using System.Diagnostics;
@@ -9,11 +9,6 @@ public class HomeController : Controller
 	public IActionResult Index()
 	{
 		Log.Information("Page Visited: Home");
-		return View();
-	}
-
-	public IActionResult Privacy()
-	{
 		return View();
 	}
 

@@ -1,6 +1,9 @@
 using Serilog;
+using Web.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+
+DependencyInjectionConfig.Configure(builder.Services);
 
 builder.Services.AddControllersWithViews();
 
