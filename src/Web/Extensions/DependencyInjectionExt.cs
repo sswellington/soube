@@ -1,11 +1,11 @@
 using Application.Interfaces.Services;
 using Application.Services;
 
-namespace Web.Configuration;
+namespace Web.Extensions;
 
-public static class DependencyInjectionConfig
+public static partial class Extensions
 {
-	public static void Configure(IServiceCollection services)
+	public static void DependencyInjection(IServiceCollection services)
 	{
 		Repositories(services);
 		Services(services);
