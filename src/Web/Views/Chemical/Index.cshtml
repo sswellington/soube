@@ -8,28 +8,26 @@
 
 <br />
 <article text-2xl>
-	<p>
-        1) (@Model.Organizer - @Model.Year) @Model.Statement
-	</p>
     <fieldset class="space-y-2">
+        <legend>1) (@Model.Organizer - @Model.Year) @Model.Statement</legend>
 	    <div>
-            <input type="radio" name="quimica1" value="AA"> A) @Model.A
+            <input type="radio" name="quimica1" value="AA"> @Model.OptionA
 	    </div>
 
 	    <div class="radio">
-            <input type="radio" name="quimica1" value="AB"> B) @Model.B
+            <input type="radio" name="quimica1" value="AB"> @Model.OptionB
 	    </div>
 
 	    <div class="radio">
-            <input type="radio" name="quimica1" value="AC"> B) @Model.C
+            <input type="radio" name="quimica1" value="AC"> @Model.OptionC
 	    </div>
 
 	    <div class="radio">
-            <input type="radio" name="quimica1" value="AD"> B) @Model.D
+            <input type="radio" name="quimica1" value="AD"> @Model.OptionD
 	    </div>
 
 	    <div class="radio">
-            <input type="radio" name="quimica1" value="AE"> E) @Model.E
+            <input type="radio" name="quimica1" value="AE"> E) @Model.OptionE
 	    </div>
     </fieldset>
 </article>

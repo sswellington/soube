@@ -1,6 +1,4 @@
 using Application.Interfaces.Services;
-using Application.Services;
-using Application.ViewModel.Question;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 
