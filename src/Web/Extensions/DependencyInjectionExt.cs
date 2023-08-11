@@ -1,5 +1,7 @@
+using Application.Interfaces.Repositories;
 using Application.Interfaces.Services;
 using Application.Services;
+using Infrastructure.DataAccess.Repositories;
 
 namespace Web.Extensions;
 
@@ -15,6 +17,7 @@ public static partial class Extensions
 
 	private static void Repositories(IServiceCollection services)
 	{
+		services.AddSingleton<IQuestionRepository, QuestionRepository>();
 	}
 
 	private static void Services(IServiceCollection services)

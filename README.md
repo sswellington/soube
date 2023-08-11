@@ -1,5 +1,13 @@
 # Simulador Online Brasileiro Educacional
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/6577b066ecbac352ae82/maintainability)](https://codeclimate.com/github/sswellington/soube/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6577b066ecbac352ae82/test_coverage)](https://codeclimate.com/github/sswellington/soube/test_coverage)
+
+---
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=bugs)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sswellington_soube&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=sswellington_soube)
+
 ### INTRODUÇÃO
 
 Todo estudante no decorrer do colegial, passará por alguma avaliação de conhecimento. 
