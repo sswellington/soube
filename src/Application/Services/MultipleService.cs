@@ -15,6 +15,6 @@ public sealed class MultipleService : IMultipleService
 		OptionB : "B) A lata é feita de alumínio, que, pelo aquecimento, pode reagir com o oxigênio do ar.",
 		OptionC : "C) O aquecimento provoca o aumento do volume da lata, com a consequente condensação do gás em seu interior.",
 		OptionD : "D) O aumento da temperatura provoca a polimerização do gás butano, inutilizando o produto.",
-		OptionE : "E) A lata pode se derreter e reagir com as substâncias contidas em seu interior, inutilizando o produto."
+		OptionE : "E) A lata pode se derreter e reagir com as substâncias contidas em seu interior, inutilizando o produto.   "
 	);
 }
