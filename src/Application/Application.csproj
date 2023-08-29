@@ -11,4 +11,16 @@
 	<Folder Include="Exceptions\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Aggregates\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Aggregates\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Aggregates\**" />
+  </ItemGroup>
+
 </Project>

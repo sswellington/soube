@@ -61,6 +61,10 @@ Portanto tem o objetivo de ter uma competitividade interna com o sistema de pont
 
 --- 
 
+### Fonte das questões
+* [ENEM](https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos)
+* [FUVEST](https://acervo.fuvest.br/fuvest/)
+
 ### REFERÊNCIA
  [1] Brainly. [Disponível](https://brainly.com.br/) Acessado em 23/04/2018.
 

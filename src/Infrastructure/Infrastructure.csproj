@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Application\Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Database\Chemical.cs" />
+  </ItemGroup>
+
 </Project>

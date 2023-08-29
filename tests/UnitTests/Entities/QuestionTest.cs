@@ -1,24 +1,85 @@
-using Newtonsoft.Json.Linq;
 using UnitTests.Fixtures;
 
 namespace UnitTests.Entities;
 
 [Trait("Entities", "Question")]
-public class QuestionTest
+public class QuestionFakeTest
 {
+	[Fact(DisplayName = "Get Software Engineering question returns successfully")]
+	public void GetSoftwareEngineering_Should_ReturnSuccessfully()
+	{
+		//Arrange
+		var questions = QuestionFixture.GetQuestions();
+
+		//Act
+		var question  = questions.FirstOrDefault(q => q.Discipline == "Software Engineering");
+
+		//Assert
+		question!.Id.Should().NotBeNull();
+		question.Id.Should().BeOfType<string>();
+		question.Id.Should().StartWithEquivalentOf(question.Discipline.ToLower() + "-");
+		question.Address.Should().NotBeNull();
+		question.Correct.Should().Be('E');
+		question.Schooling.Should().Be('U');
+		question.EntranceExam.Should().BeFalse();
+		question.PublicTender.Should().BeTrue();
+		question.Expired.Should().BeFalse();
+		question.CreationDate.Date.Should().Be(DateTime.Today);
+	}
+
+	[Fact(DisplayName = "Get chemistry question returns successfully")]
+	public void GetChemistry_Should_ReturnSuccessfully()
+	{
+		//Arrange
+		var questions = QuestionFixture.GetQuestions();
+
+		//Act
+		var chemistry  = questions.FirstOrDefault(q => q.Discipline == "Chemistry");
+
+		//Assert
+		chemistry!.Id.Should().NotBeNull();
+		chemistry.Id.Should().BeOfType<string>();
+		chemistry.Id.Should().StartWithEquivalentOf(chemistry.Discipline.ToLower() + "-");
+		chemistry.Address.Should().NotBeNull();
+		chemistry.Correct.Should().Be('A');
+		chemistry.Schooling.Should().Be('M');
+		chemistry.EntranceExam.Should().BeTrue();
+		chemistry.PublicTender.Should().BeFalse();
+		chemistry.Expired.Should().BeFalse();
+		chemistry.CreationDate.Date.Should().Be(DateTime.Today);
+	}
+
 	[Fact(DisplayName = "Primary Key Generator should return successfully")]
 	public void PrimaryKeyGenerator_Should_ReturnSuccessfully()
 	{
 		//Arrange
-		var entity = QuestionFixture.GetQuestionEntity();
+		var chemistry = QuestionFixture.GetQuestionAboutChemistry();
+		var physical = QuestionFixture.GetQuestionAboutPhysical();
 
 		//Act
-		var id = entity.Id;
 
 		//Assert
-		id.Should().NotBeNull();
-		id.Should().BeOfType<string>();
-		id.Should().StartWithEquivalentOf(entity.Discipline.ToLower() + "-" + entity.Organizer.ToLower());
+		chemistry.Id.Should().NotBeNull();
+		chemistry.Id.Should().BeOfType<string>();
+		chemistry.Id.Should().StartWithEquivalentOf(chemistry.Discipline.ToLower() + "-");
+		chemistry.Address.Should().NotBeNull();
+		chemistry.Correct.Should().Be('A');
+		chemistry.Schooling.Should().Be('M');
+		chemistry.EntranceExam.Should().BeTrue();
+		chemistry.PublicTender.Should().BeFalse();
+		chemistry.Expired.Should().BeFalse();
+		chemistry.CreationDate.Date.Should().Be(DateTime.Today);
+
+		physical.Id.Should().NotBeNull();
+		physical.Id.Should().BeOfType<string>();
+		physical.Id.Should().StartWithEquivalentOf(physical.Discipline.ToLower() + "-");
+		physical.Address.Should().NotBeNull();
+		physical.Correct.Should().Be('C');
+		physical.Schooling.Should().Be('M');
+		physical.EntranceExam.Should().BeTrue();
+		physical.PublicTender.Should().BeFalse();
+		physical.Expired.Should().BeFalse();
+		physical.CreationDate.Date.Should().Be(DateTime.Today);
 	}
 
 	[Fact(DisplayName = "Entity is new should return default value of entity")]
@@ -34,10 +95,17 @@ public class QuestionTest
 		//Assert
 		id.Should().NotBeNull();
 		id.Should().BeOfType<string>();
-		id.Should().StartWithEquivalentOf(init + "-" + init);
+		id.Should().StartWithEquivalentOf(init + "-");
 
 		entity.Correct.Should().Be('W');
+		entity.EntranceExam.Should().BeFalse();
+		entity.PublicTender.Should().BeFalse();
+		entity.Expired.Should().BeFalse();
+		entity.CreationDate.Date.Should().Be(DateTime.Today);
+		entity.Schooling.Should().Be('E');
 
+		entity.Address.Should().Be(init);
+		entity.NotebookDescription.Should().Be(init);
 		entity.Discipline.Should().Be(init);
 		entity.Organizer.Should().Be(init);
 		entity.Statement.Should().Be(init);
