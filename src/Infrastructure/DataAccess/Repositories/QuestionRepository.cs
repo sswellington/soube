@@ -1,5 +1,6 @@
 using Application.Entities;
 using Application.Interfaces.Repositories;
+using Infrastructure.Database;
 
 namespace Infrastructure.DataAccess.Repositories;
 
@@ -11,4 +12,8 @@ namespace Infrastructure.DataAccess.Repositories;
 
 public class QuestionRepository : BaseRepository<QuestionEntity>, IQuestionRepository
 {
+	public override IEnumerable<QuestionEntity> GetAll()
+	{
+		return FakeDatabase.GetQuestions();
+	}
 }

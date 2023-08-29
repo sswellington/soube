@@ -1,4 +1,4 @@
-using UnitTests.Fixtures;
+using Infrastructure.Database;
 
 namespace UnitTests.Entities;
 
@@ -9,7 +9,7 @@ public class QuestionFakeTest
 	public void GetSoftwareEngineering_Should_ReturnSuccessfully()
 	{
 		//Arrange
-		var questions = QuestionFixture.GetQuestions();
+		var questions = FakeDatabase.GetQuestions();
 
 		//Act
 		var question  = questions.FirstOrDefault(q => q.Discipline == "Software Engineering");
@@ -31,7 +31,7 @@ public class QuestionFakeTest
 	public void GetChemistry_Should_ReturnSuccessfully()
 	{
 		//Arrange
-		var questions = QuestionFixture.GetQuestions();
+		var questions = FakeDatabase.GetQuestions();
 
 		//Act
 		var chemistry  = questions.FirstOrDefault(q => q.Discipline == "Chemistry");
@@ -53,8 +53,8 @@ public class QuestionFakeTest
 	public void PrimaryKeyGenerator_Should_ReturnSuccessfully()
 	{
 		//Arrange
-		var chemistry = QuestionFixture.GetQuestionAboutChemistry();
-		var physical = QuestionFixture.GetQuestionAboutPhysical();
+		var chemistry = FakeDatabase.GetQuestionAboutChemistry();
+		var physical = FakeDatabase.GetQuestionAboutPhysical();
 
 		//Act
 
@@ -86,7 +86,7 @@ public class QuestionFakeTest
 	public void EntityIsNew_Should_ReturnDefaultValueOfEntity()
 	{
 		//Arrange
-		var entity = QuestionFixture.GetQuestionEntityIsNew();
+		var entity = FakeDatabase.GetQuestionEntityIsNew();
 		string init = "empty";
 
 		//Act
