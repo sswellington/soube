@@ -1,14 +1,15 @@
+using Application.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
-using Serilog;
 
 namespace Web.Controllers;
 
-[Route("discipline/phisical")]
-public class PhysicalController : Controller
+[Route("discipline/physical")]
+public class PhysicalController : BaseController
 {
-	public IActionResult Index()
-	{
-		Log.Information("Page Visited: Phisical");
-		return View();
-	}
+	private readonly IMultipleService _multipleService;
+
+	public PhysicalController(IMultipleService multipleService) => _multipleService = multipleService;
+
+	[HttpGet]
+	public override ViewResult Index() => View(_multipleService.GetPhysical());
 }

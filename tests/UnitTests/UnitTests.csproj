@@ -32,17 +32,4 @@
     <Folder Include="Fixtures\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Fixtures\QuestionFixture.cs" />
-    <Compile Remove="Services\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Services\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Services\**" />
-  </ItemGroup>
-
 </Project>

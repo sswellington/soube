@@ -1,14 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Serilog;
 
 namespace Web.Controllers;
 
 [Route("profile")]
-public class ProfileController : Controller
+public class ProfileController : BaseController
 {
-	public IActionResult Index()
-	{
-		Log.Information("Page Visited: Profile");
-		return View();
-	}
 }

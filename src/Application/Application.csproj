@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
 	<TargetFramework>net7.0</TargetFramework>
@@ -10,17 +10,5 @@
   <ItemGroup>
 	<Folder Include="Exceptions\" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Aggregates\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Aggregates\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Aggregates\**" />
-  </ItemGroup>
-
+	
 </Project>
