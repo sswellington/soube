@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Compile Remove="Database\Chemical.cs" />
+    <Compile Remove="Database\MockDatabase\Questions\Question.cs" />
   </ItemGroup>
 
 </Project>

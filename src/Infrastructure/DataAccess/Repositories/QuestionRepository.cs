@@ -14,6 +14,6 @@ public class QuestionRepository : BaseRepository<QuestionEntity>, IQuestionRepos
 {
 	public override IEnumerable<QuestionEntity> GetAll()
 	{
-		return FakeDatabase.GetQuestions();
+		return MockDb.GetQuestions();
 	}
 }

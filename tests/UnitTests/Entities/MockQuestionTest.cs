@@ -1,15 +1,17 @@
+using Application.Entities;
 using Infrastructure.Database;
+using Infrastructure.Database.MockDatabase.Questions;
 
 namespace UnitTests.Entities;
 
-[Trait("Entities", "Question")]
-public class QuestionFakeTest
+[Trait("Entities", "MockQuestion")]
+public class MockQuestionTest
 {
 	[Fact(DisplayName = "Get Software Engineering question returns successfully")]
 	public void GetSoftwareEngineering_Should_ReturnSuccessfully()
 	{
 		//Arrange
-		var questions = FakeDatabase.GetQuestions();
+		var questions = MockDb.GetQuestions();
 
 		//Act
 		var question  = questions.FirstOrDefault(q => q.Discipline == "Software Engineering");
@@ -31,7 +33,7 @@ public class QuestionFakeTest
 	public void GetChemistry_Should_ReturnSuccessfully()
 	{
 		//Arrange
-		var questions = FakeDatabase.GetQuestions();
+		var questions = MockDb.GetQuestions();
 
 		//Act
 		var chemistry  = questions.FirstOrDefault(q => q.Discipline == "Chemistry");
@@ -53,13 +55,15 @@ public class QuestionFakeTest
 	public void PrimaryKeyGenerator_Should_ReturnSuccessfully()
 	{
 		//Arrange
-		var chemistry = FakeDatabase.GetQuestionAboutChemistry();
-		var physical = FakeDatabase.GetQuestionAboutPhysical();
+		var questions = MockDb.GetQuestions();
 
 		//Act
+		var chemistry = questions.FirstOrDefault(q => q.Discipline == "Chemistry");
+		var physical = questions.FirstOrDefault(q => q.Discipline == "Physical");
 
 		//Assert
-		chemistry.Id.Should().NotBeNull();
+		chemistry.Should().NotBeNull();
+		chemistry!.Id.Should().NotBeNull();
 		chemistry.Id.Should().BeOfType<string>();
 		chemistry.Id.Should().StartWithEquivalentOf(chemistry.Discipline.ToLower() + "-");
 		chemistry.Address.Should().NotBeNull();
@@ -70,7 +74,8 @@ public class QuestionFakeTest
 		chemistry.Expired.Should().BeFalse();
 		chemistry.CreationDate.Date.Should().Be(DateTime.Today);
 
-		physical.Id.Should().NotBeNull();
+		physical.Should().NotBeNull();
+		physical!.Id.Should().NotBeNull();
 		physical.Id.Should().BeOfType<string>();
 		physical.Id.Should().StartWithEquivalentOf(physical.Discipline.ToLower() + "-");
 		physical.Address.Should().NotBeNull();
@@ -86,16 +91,17 @@ public class QuestionFakeTest
 	public void EntityIsNew_Should_ReturnDefaultValueOfEntity()
 	{
 		//Arrange
-		var entity = FakeDatabase.GetQuestionEntityIsNew();
+		var questions = MockQuestion.GetQuestions();
 		string init = "empty";
 
 		//Act
-		var id = entity.Id;
+		var entity = questions.FirstOrDefault(q => q.Discipline == init);
 
 		//Assert
-		id.Should().NotBeNull();
-		id.Should().BeOfType<string>();
-		id.Should().StartWithEquivalentOf(init + "-");
+		entity.Should().NotBeNull();
+		entity!.Id.Should().NotBeNull();
+		entity!.Id.Should().BeOfType<string>();
+		entity!.Id.Should().StartWithEquivalentOf(init + "-");
 
 		entity.Correct.Should().Be('W');
 		entity.EntranceExam.Should().BeFalse();
